@@ -1,0 +1,49 @@
+<!-- XAVIER/index.html -->
+    
+<!DOCTYPE html>
+<html lang="en" ng-app="XavierApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
+    <title>Xavier</title>
+
+    <link href="vendors/css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap-grid.css" type="text/css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap-reboot.css" type="text/css" rel="stylesheet">
+    <link href="vendors/angular-mobile-ui/dist/css/mobile-angular-ui-base.css" type="text/css" rel="stylesheet">
+    <link href="vendors/angular-mobile-ui/dist/css/mobile-angular-ui-desktop.css" type="text/css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
+    
+    <link href="css/app.css" type="text/css" rel="stylesheet"> 
+
+    <script type="text/javascript" src="vendors/jquery/jquery.js"></script>
+
+    <script type="text/javascript" src="vendors/angular/angular.js"></script>
+    <script type="text/javascript" src="vendors/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="vendors/angular/angular-route.js"></script>
+    <script type="text/javascript" src="vendors/angular-ui-router/angular-ui-router.js"></script>
+    <script type="text/javascript" src="vendors/angular-mobile-ui/dist/js/mobile-angular-ui.js"></script>
+    
+    <script type="text/javascript" src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap/dist/js/popper.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers/sign-in.js"></script>
+    <script type="text/javascript" src="controllers/sign-up.js"></script>
+    <script type="text/javascript" src="controllers/start-page.js"></script>
+    
+    <script type="text/javascript" src="components/xav-nav.js"></script>
+    
+    <script type="text/javascript" src="services/users-services.js"></script>
+</head>
+<body>
+    <div>
+        <xav-nav></xav-nav>
+
+        <ui-view></ui-view>
+    </div>
+</body>
+</html>

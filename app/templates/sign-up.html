@@ -1,0 +1,120 @@
+<!-- /app/templates/sign-up.html -->
+
+<section id="sign-up" class="container">
+
+    <form name="signUpCtrl.formSignUp"
+          class="formSignUp container"
+          ng-submit="signUpCtrl.submit()">
+
+        <div class="row">
+            <label for="fname"
+                   class="col-xs-4 text-right">
+                First Name
+            </label>
+            <br />
+            <input type="text"
+                   name="fname"
+                   class="col-xs-8 pull-left"
+                   ng-model="signUpCtrl.user.firstName"
+                   ng-minLength = "2"
+                   required />
+            <br />
+            <span ng-show="signUpCtrl.formSignUp.fname.$error.required && formSignUp.fname.$dirty"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please provide <b>First Name</b><br />
+            </span>
+            <span ng-show="signUpCtrl.formSignUp.fname.$error.minlength"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please enter at least <b>2</b> characters for First Name<br />
+            </span>
+        </div>
+        <br />
+        <div class="row">
+            <label for="lname"
+                   class="col-xs-4 text-right">
+                Last Name
+            </label>
+            <br />
+            <input type="text"
+                   name="lname"
+                   class="col-xs-8 pull-left"
+                   ng-model="signUpCtrl.user.lastName"
+                   ng-minLength = "3"
+                   required />
+            <br />
+            <span ng-show="signUpCtrl.formSignUp.lname.$error.required && formSignUp.lname.$dirty"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please provide <b>Last Name</b><br />
+            </span>
+            <span ng-show="signUpCtrl.formSignUp.lname.$error.minlength"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please enter at least <b>3</b> characters for Last Name<br />
+            </span>
+        </div>
+        <br />
+        <div class="row">
+            <label for="emailAddr"
+                   class="col-xs-4 text-right">
+                   Email Address
+            </label>
+            <br />
+            <input type="email"
+                   name="emailAddr"
+                   class="col-xs-8 pull-left"
+                   ng-model="signUpCtrl.user.emailAddr"
+                   ng-minLength = "3"
+                   required />
+            <br />
+            <span ng-show="signUpCtrl.formSignUp.emailAddr.$error.required && formSignUp.emailAddr.$dirty"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please provide <b>Email Addess</b><br />
+            </span>
+            <span ng-show="signUpCtrl.formSignUp.emailAddr.$error.minlength"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please enter at least <b>3</b> characters for Email Address<br />
+            </span>
+            <span ng-show="signUpCtrl.formSignUp.emailAddr.$error.validateErr"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                There is format error in Email Address<br />
+            </span>
+        </div>
+        <br />
+        <div class="row">
+            <label for="passWord"
+                   class="col-xs-4 text-right">
+                   Password
+            </label>
+            <br />
+            <input type="password"
+                   name="passWord"
+                   class="col-xs-8 pull-left"
+                   ng-model="signUpCtrl.user.passWord"
+                   ng-minLength = "8"
+                   required />
+            <br />
+            <span ng-show="signUpCtrl.formSignUp.passWord.$error.required && formSignUp.passWord.$dirty"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please provide <b>Password</b><br />
+            </span>
+            <span ng-show="signUpCtrl.formSignUp.passWord.$error.minlength"
+                    class="col-xs-offset-5 col-xs-7 validate-err">
+                Please enter at least <b>8</b> characters for Password<br />
+            </span>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-4">&nbsp;</div>
+            <div class="col-xs-2 text-left">
+                <input type="submit"
+                class="btn btn-primary"
+                value="Sign Up"
+                ng-disabled="signUpCtrl.formSignUp.$invalid" />
+            </div>    
+            <div class="col-xs-6">&nbsp;</div>
+        </div>
+
+    </form>
+    <br />
+    <div id="popUp" style="display: none;"> {{signUpCtrl.popMsg}} </div>
+
+</section>
